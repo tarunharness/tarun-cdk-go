@@ -15,7 +15,7 @@ func NewS3Stack(scope constructs.Construct, id string, props *awscdk.StackProps)
 		Versioned:         jsii.Bool(true),
 		RemovalPolicy:     awscdk.RemovalPolicy_DESTROY,
 		AutoDeleteObjects: jsii.Bool(true),
-		// Encryption:        awss3.BucketEncryption_S3_MANAGED,
+		Encryption:        awss3.BucketEncryption_S3_MANAGED,
 	})
 
 	awscdk.NewCfnOutput(stack, jsii.String("S3BucketARN"), &awscdk.CfnOutputProps{
